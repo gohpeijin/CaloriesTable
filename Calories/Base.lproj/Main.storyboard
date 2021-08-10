@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search by name" translatesAutoresizingMaskIntoConstraints="NO" id="PVh-Zx-LUs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-TO-gK9">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No item found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-C5-C1U">
+                                <rect key="frame" x="144" y="430.5" width="126" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KoN-TO-gK9" secondAttribute="bottom" id="04f-to-z4X"/>
+                            <constraint firstItem="KoN-TO-gK9" firstAttribute="top" secondItem="PVh-Zx-LUs" secondAttribute="bottom" id="CX6-I5-zue"/>
+                            <constraint firstItem="KoN-TO-gK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dy7-dY-NmR"/>
+                            <constraint firstItem="PVh-Zx-LUs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PEz-sQ-ySn"/>
+                            <constraint firstItem="VrN-C5-C1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sxx-Dd-keJ"/>
+                            <constraint firstItem="PVh-Zx-LUs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TcF-dk-hiP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KoN-TO-gK9" secondAttribute="trailing" id="eD8-jY-BAH"/>
+                            <constraint firstItem="PVh-Zx-LUs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ikL-jy-PU0"/>
+                            <constraint firstItem="VrN-C5-C1U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="quz-zl-ZJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="caloriesTableView" destination="KoN-TO-gK9" id="8i5-FC-2JL"/>
+                        <outlet property="labelNoItem" destination="VrN-C5-C1U" id="BFi-zW-Ovy"/>
+                        <outlet property="searchBar" destination="PVh-Zx-LUs" id="gnk-Vr-pzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
