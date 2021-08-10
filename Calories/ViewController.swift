@@ -93,12 +93,12 @@ extension ViewController: UITableViewDataSource{
 extension ViewController: UISearchBarDelegate{
     
     func searchBar(_ searchBar:UISearchBar, textDidChange searchText:String){
-        if (searchText == ""){
+        if (searchText.trimmingCharacters(in: .whitespaces) == ""){
            searchCaloriesKeys = caloriesKeys
         }
         else{
             // match the search string with the food's calories array
-            searchCaloriesKeys = caloriesKeys.filter({$0.lowercased().contains(searchText.lowercased())})
+            searchCaloriesKeys = caloriesKeys.filter({$0.lowercased().contains(searchText.lowercased().trimmingCharacters(in: .whitespaces))})
         }
         
         // to show this label when there is no item found
