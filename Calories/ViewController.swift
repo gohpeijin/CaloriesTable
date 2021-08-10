@@ -42,11 +42,10 @@ class ViewController: UIViewController {
                         options: PropertyListSerialization.ReadOptions(),
                         format: nil)
                     
-                    // downcast the property list to an
-                    // optional array of Strings
+                    // downcast the property list
                     let calories = plistObject as? [String:String]
                     
-                    // assign values of array to a list
+                    // assign values to a list
                     if let calories = calories {
                         caloriesList = calories
 
@@ -66,8 +65,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource{
     
-    // tables comprised of sections and rows, a table can hv n num of sections
-    // each section can have n num of row, defualt section is 1
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -79,7 +76,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CaloriesTableViewCell.identifier, for: indexPath) as! CaloriesTableViewCell
         
-        // change the selected background color to light green
+        // change the selected background color
         let backgroundview = UIView()
         backgroundview.backgroundColor = UIColor.init(red: 124/255, green: 152/255, blue: 180/255, alpha: 0.2)
         cell.selectedBackgroundView = backgroundview
